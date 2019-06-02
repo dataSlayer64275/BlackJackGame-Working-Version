@@ -20,6 +20,11 @@ public class GameTest {
     }
 
     @Test
+    public void playersCanPopulate() {
+        assertEquals(1, players.size());
+    }
+
+    @Test
     public void dealerHasPlayers() {
         assertEquals(1, dealer.numberOfPlayers());
     }
