@@ -31,12 +31,11 @@ public class Deck {
 
     public void shuffle() {
         Collections.shuffle(cards);
+        //This part was used in the assertNotEquals attempt in the DeckTest
+//        return cards;
     }
 
-    public Card dealOne() {
-        Card card = cards.get(0);
-        cards.remove(card);
-        return card;
-
+    public ArrayList<Card> cards() {
+        return cards;
     }
 }

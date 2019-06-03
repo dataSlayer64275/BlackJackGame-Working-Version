@@ -1,7 +1,10 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class DeckTest {
 
@@ -17,10 +20,9 @@ public class DeckTest {
         assertEquals(52, deck.getCardCount());
     }
 
-    @Test
-    public void testDeckCanShuffle() {
-        deck.printCards();
-        deck.shuffle();
-        deck.printCards();
-    }
+//    @Test
+//    public void testDeckCanShuffle() {
+//        ArrayList<Card> shuffledDeck = deck.shuffle();
+//        assertNotEquals(deck.cards(),shuffledDeck);
+//    }
 }

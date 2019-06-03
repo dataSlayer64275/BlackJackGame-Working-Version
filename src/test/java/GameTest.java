@@ -19,21 +19,24 @@ public class GameTest {
         dealer = new Dealer(players, deck);
     }
 
-    @Test
-    public void playersCanPopulate() {
-        assertEquals(1, players.size());
-    }
-
-    @Test
-    public void dealerHasPlayers() {
-        assertEquals(1, dealer.numberOfPlayers());
-    }
 
     @Test
     public void dealerCanDealCards() {
         dealer.deal();
-//        assertEquals( 2, player1.numberOfCards());
+        assertEquals( 2, player1.numberOfCards());
         assertEquals(2, dealer.numberOfCards());
+        //Which one is better here:
+        assertEquals(48, dealer.deck.getCardCount());
+//        assertEquals(48, dealer.getCardCount());
+        player1.showHand();
+        dealer.showHand();
     }
 
+    @Test
+    public void canChooseWinner() {
+        dealer.deal();
+        assertEquals("Dealer Wins!",dealer.chooseWinner());
+        assertEquals("Player wins!",dealer.chooseWinner());
+
+    }
 }

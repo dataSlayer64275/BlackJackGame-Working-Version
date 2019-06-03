@@ -4,11 +4,11 @@ public class Player {
 
     ArrayList<Card> hand;
 
-    public Player(){
+    public Player() {
         hand = new ArrayList<Card>();
     }
 
-    public void addCardToHand(Card card){
+    public void addCardToHand(Card card) {
         this.hand.add(card);
     }
 
@@ -16,8 +16,14 @@ public class Player {
         return hand.size();
     }
 
-    public int returnCardRank(){
-        return hand.get(0).getRank().getValue();
+
+    public void showHand() {
+        for (Card card : hand) {
+            System.out.println(card.getRank() + " " + card.getSuit());
+        }
+    }
+
+    public int returnCard(int index) {
+        return hand.get(index).getRank().getValue();
     }
 }
-
